@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container Style */
+        form {
+            background-color: #ffffff; /* White background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Light shadow */
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark grey color */
+            margin-bottom: 20px;
+        }
+
+        /* Form Fieldset Style */
+        fieldset {
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007BFF; /* Blue color for legends */
+        }
+
+        /* Label and Input Styles */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Submit Button Style */
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            form {
+                padding: 20px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"],
+            select {
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Admission Form</h1>
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Contact Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </fieldset>
+
+        <!-- Educational Information Section -->
+        <fieldset>
+            <legend>Educational Information</legend>
+            <label for="qualification">Highest Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required>
+
+            <label for="school">School/College Name:</label>
+            <input type="text" id="school" name="school" required>
+
+            <label for="grade">Grade/Percentage:</label>
+            <input type="text" id="grade" name="grade" required>
+        </fieldset>
+
+        <!-- Course Preference Section -->
+        <fieldset>
+            <legend>Course Preference</legend>
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="science">Science</option>
+                <option value="commerce">Commerce</option>
+                <option value="arts">Arts</option>
+                <option value="engineering">Engineering</option>
+                <option value="medical">Medical</option>
+            </select>
+        </fieldset>
+
+        <!-- Terms and Conditions Section -->
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions.</label>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
